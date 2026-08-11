@@ -668,6 +668,7 @@ func (a *Application) Suspend(f func()) bool {
 	} else {
 		// It hasn't changed. Resume.
 		screen.Resume() // Not much we can do in case of an error.
+		screen.Sync()
 	}
 
 	// Continue application loop.
